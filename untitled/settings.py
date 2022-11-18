@@ -55,7 +55,8 @@ INSTALLED_APPS = [
 
     
     # apps
-    'django_filters'
+    'django_filters',
+    'products',
 
 ]
 
