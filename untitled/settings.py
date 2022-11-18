@@ -161,6 +161,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #
 # }
 SITE_ID = 1
+MEDIA_ROOT = BASE_DIR / "images"
+MEDIA_URL = "/media/"
 
 # REST_USE_JWT = True
 # JWT_AUTH_COOKIE = "access"
