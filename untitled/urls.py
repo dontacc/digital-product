@@ -26,9 +26,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("restframework-auth" , include('rest_framework.urls')),
 
-
-    # path("api/token/" , view_jwt.TokenObtainPairView.as_view() , name="token_obtain_pair"), #access token
-    # path("api/token/refres/" , view_jwt.TokenRefreshView.as_view() , name="token_refresh") # refresh token
+    path("" , include("products.urls"))
 ]
 
 
