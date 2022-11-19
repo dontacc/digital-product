@@ -19,6 +19,8 @@ from django.urls import path , include
 from django.views.generic import TemplateView
 from dj_rest_auth.views import PasswordResetConfirmView
 from rest_framework_simplejwt import views as view_jwt
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,6 +29,9 @@ urlpatterns = [
 
     # path("api/token/" , view_jwt.TokenObtainPairView.as_view() , name="token_obtain_pair"), #access token
     # path("api/token/refres/" , view_jwt.TokenRefreshView.as_view() , name="token_refresh") # refresh token
-
-
 ]
+
+
+# yani age dar mohite development bood bia va az roote asli boro media haro bebin
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

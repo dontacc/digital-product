@@ -1,6 +1,7 @@
 .idea
 db.sqlite3
-media/
+Images/
 
 **/__pycache__/
 *.pyc
+local_settings.py
